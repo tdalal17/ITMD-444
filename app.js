@@ -3,6 +3,11 @@ const bodyParser = require('body-parser');
 const connectDB = require('./config/db');
 const entitiesRoutes = require('./routes/entities');
 
+// Define a route for the root URL
+app.get('/', (req, res) => {
+  res.send('Welcome to the ITMD-444 Assignment API!');
+});
+
 const app = express();
 app.use(bodyParser.json());
 
